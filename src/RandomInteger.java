@@ -1,11 +1,13 @@
 package src;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class RandomInteger {
     public static void main(String[] args) {
-        Random random = new Random();
-        int randomNumber = random.nextInt(256);
-        System.out.println(randomNumber);
+        int i = 1;
+        System.out.println(i);
+        System.out.print(100);
     }
+
 }
