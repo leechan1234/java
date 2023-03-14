@@ -53,7 +53,7 @@ public class _04_SwitchCase {
         // ex 중고상품의 등급에 따른 가격을 책정 (1급 : 최상,4급 : 최하)
         int grade = 1; //등급
         int price = 7000; // 기본가격
-        switch (grade){
+        switch (grade) {
             case 1:
                 price += 2000; // price = price + 1000;
             case 2:
@@ -67,8 +67,71 @@ public class _04_SwitchCase {
         //않아서 계속 덧셈이 된다
         // 2등급 제품의 가격 :  9000원
 
+
+        //1등 : 전액 장학금
+        //2등 : 반액 장학금
+        //3등 : 반액 장학금
+        //그 외 : 장학금 대상 아님
+
+        //if else
+        int rank = 1;
+        if (rank == 1) {
+            System.out.println("전액 장학금 대상입니다");
+        } else if (rank == 2 || rank == 3) {
+            System.out.println("반액 장학금 대상");
+        } else {
+            System.out.println("장학금 대상 x");
+        }
+        System.out.println("조회 완료");
+
+        //switch case
+
+        rank = 1;
+        switch (rank) {
+            case 1:
+                System.out.println("장학금 대상 입니다");
+                break;
+            case 2:
+            case 3:
+                System.out.println("반액 장학금 대상 입니다");
+                break;
+            case 4:
+                System.out.println("장학금 대상이 아닙니다");
+                break;
+            default:
+                System.out.println("x");
+        }
+        System.out.println("조회 완료");
+
+        // ex 중고상품의 등급에 따른 가격을 책정 (1급 : 최상,4급 : 최하)
+        int gradeGrade = 2;
+        int gradeMoney = 6000;
+        switch (gradeGrade) {
+            case 1:
+                gradeMoney += 1000;
+            case 2:
+                gradeMoney += 1000;
+            case 3:
+                gradeMoney += 1000;
+
+            case 4:
+                gradeMoney += 1000;
+                System.out.println(gradeGrade + "등급 제품의 가격은" + gradeMoney + "입니다");
+
+                if (gradeGrade == 1) {
+                    System.out.println("그렇지 1등급 골라야지");
+                    System.out.println(" 근데1등급이 좀 비싸 ");
+                    break;
+
+                }
+        }
+
+
     }
 
+
 }
+
+
 
 
