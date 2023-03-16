@@ -5,14 +5,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-       int number = scanner.nextInt();
-
-        for (int i = 0; i <number ; i++) {
-            for (int j = 0; j <i + 1 ; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("1");
+        } else {
+            System.out.println("0");
         }
     }
 }
