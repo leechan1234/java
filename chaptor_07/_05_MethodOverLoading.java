@@ -5,6 +5,7 @@ public class _05_MethodOverLoading {
         BlackBox b1 = new BlackBox();
         b1.modelName = "까망이";
     }
-
-    void record(boolean showDateTime, boolean)
 }
+
+
+
