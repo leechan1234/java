@@ -1,31 +1,19 @@
 package _Class_Oop_Practice01;
 
 public class Tv {
-    Boolean power;
-    String color;
-    int channel;
-    int hour;
-
-    String number;
-    String pettern;
-    static int width = 100;
-    static int height =200;
-
-
-
-    void power() {
-        if (power) {
-            power = false;
-        } else {
-            power = true;
-        }
+    //변수
+    String color; // 색
+    boolean power; // 전원상태
+    int channel; //채널
+    //기능
+    void power(){
+        power= ! power;
     }
-
-    void channelUp() {
+    void  channelUp(){
         channel++;
     }
-
-    void channelDown() {
+    void  channelDown(){
         channel--;
     }
+
 }
