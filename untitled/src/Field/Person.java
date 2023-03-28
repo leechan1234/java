@@ -1,6 +1,8 @@
 package Field;
-//필드
+
 public class Person {
+
+
    String name ;
     String address;
     boolean isVip;
