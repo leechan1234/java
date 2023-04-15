@@ -11,22 +11,22 @@ public class Boss {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[] SkillList1 = {"1.파이어 애로우 , 2.아이스블라스트 , 3.소드어택" };
-        String[] SkillList2 = {"1.카운터 2.방어하기 3.쉴드" };
-        String[] SkillList3 = {"1.파이어애로우 2. 숄드어택 3. 바위치기" };
-        String[] SkillList4 = {"1.전투태새 2.상급치료 3.대폭 쉴드" };
-        String[] SkillList5 = {"1.궁극 : 미사일 폭격 2. 궁극 : 급습 3. 궁극 : 종말의 날" };
+        String[] SkillList1 = {"1.파이어 애로우 , 2.아이스블라스트 , 3.소드어택"};
+        String[] SkillList2 = {"1.카운터 2.방어하기 3.쉴드"};
+        String[] SkillList3 = {"1.파이어애로우 2. 숄드어택 3. 바위치기"};
+        String[] SkillList4 = {"1.전투태새 2.상급치료 3.대폭 쉴드"};
+        String[] SkillList5 = {"1.궁극 : 미사일 폭격 2. 궁극 : 급습 3. 궁극 : 종말의 날"};
         //단계 정답
         int current = 0;
         int BossTarget = 0;
-        int lastTarget=0;
+        int lastTarget = 0;
 
         sout();
         String userInput = scanner.nextLine();
         if (userInput.equals("네")) {
             System.out.println("게임 시작");
         } else {
-            System.out.println("프로그램 종료");
+            System.out.println("잘못 입력 하였습니다");
             System.exit(0);
         }
 
@@ -61,8 +61,9 @@ public class Boss {
                     }
             }
         }
-        for (int i = 0; i < 3; i++) {
-            switch (i + 1) {
+
+        for (int i = 0; i <3; i++) {
+            switch (i+1) {
                 case 1:
                     System.out.println("1번방에서 끔찍한 냄새가난다");
                     System.out.println("2번방에서 위험한 소리가 난다");
@@ -92,41 +93,39 @@ public class Boss {
                     if (targetRoom2 == 2) {
                         BossTarget++;
                         break;
-
                     }
             }
-        }
+            if (BossTarget == 3) {
+                System.out.println("보스를 찾았습니다!!");
+            } else {
+                System.out.println("보스를 찾지 못하고 몬스터에게 둘러싸여 사망 하였습니다");
+                System.out.println("프로그램 종료");
+                System.exit(0);
 
-        if (BossTarget == 3) {
-            System.out.println("치료 하고 있는 보스를 찾았습니다 다시 " + "공격 태새를 " + "이어 갑니다");
-
-        }else {
-            System.out.println("보스를 찾지 못하고 구덩이에 빠져  사망 하였습니다");
-            System.exit(1);
-        }
-
-        for (int i = 0; i < 3; i++) {
-            switch (i+1){
-                case 1 :
-                    System.out.println("4단계 : 보스가 힘들어 하는 기세를 보였지만 나에게 큰 공격을 하여 막대한 피해를 입었다 내가 취해야 할 행동은?\n  " + Arrays.toString(SkillList4));
-                    int choose3 = scanner.nextInt();
-                    if (choose3 == 2) {
-                        lastTarget++;
-                    }
-                    break;
-                case 2 :
-                    System.out.println("5단계 :  이제 마지막이다 모든 능력을 최상위로 끌어내 보스를 처치 해야한다)\n  " + Arrays.toString(SkillList5));
-                    int choose4 = scanner.nextInt();
-                    if (choose4 == 3) {
-                        lastTarget++;
-                    }
-                    break;
             }
-        }
-        if (  lastTarget == 2){
-            System.out.println("축하합니다 보스의 hp가 0이되어 처치에 성공하였습니다");
-        }else {
-            System.out.println("보스가 마지막 남은 힘을 사용해 주인공은 사망 하였습니다.");
+            for (int j = 0; i < 3; j++) {
+                switch (i + 1) {
+                    case 1:
+                        System.out.println("4단계 : 보스가 힘들어 하는 기세를 보였지만 나에게 큰 공격을 하여 막대한 피해를 입었다 내가 취해야 할 행동은?\n  " + Arrays.toString(SkillList4));
+                        int choose4 = scanner.nextInt();
+                        if (choose4 == 2) {
+                            lastTarget++;
+                        }
+                        break;
+                    case 2:
+                        System.out.println("5단계 :  이제 마지막이다 모든 능력을 최상위로 끌어내 보스를 처치 해야한다)\n  " + Arrays.toString(SkillList5));
+                        int choose5 = scanner.nextInt();
+                        if (choose5 == 3) {
+                            lastTarget++;
+                        }
+                        break;
+                }
+            }
+            if (lastTarget == 2) {
+                System.out.println("축하합니다 보스의 hp가 0이되어 처치에 성공하였습니다");
+            } else {
+                System.out.println("보스가 마지막 남은 힘을 사용해 주인공은 사망 하였습니다.");
+            }
         }
     }
 }
