@@ -5,8 +5,8 @@ public class _04_Method {
         BlackBox b1 = new BlackBox();
         b1.modelName = "까망이";
         b1.autoReport(); //지원안됨
-        BlackBox.canAutoReport = true;
-        b1.autoReport(); // 지원 됨
+        BlackBox.canAutoReport =  true;
+//        b1.autoReport(); // 지원 됨
         b1.insetMemoryCard(256);
 
         //일반영상 : 1
