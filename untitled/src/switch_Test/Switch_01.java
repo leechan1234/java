@@ -1,26 +1,20 @@
 package switch_Test;
 
+import java.util.Scanner;
+
 public class Switch_01 {
     public static void main(String[] args) {
-        int num = 3;
-        switch (num){
-            case 1 :
-                System.out.println("1");
-                break;
-            case 2 :
-                System.out.println("2");
-                break;
-            case 3 :
-                System.out.println("3");
-                break;
-            case 4 :
-                System.out.println("4");
-                break;
-            case 5:
-                System.out.println("5");
-                break;
-            default:
-                System.out.println("6");
+        Scanner scanner =new Scanner(System.in);
+        // 5번 입력 45번의 추첨 로또 만들기
+        int[] idx = new int[45];
+        int crt = 0;
+        for (int i = 0; i <5 ; i++) {
+            idx[i] = scanner.nextInt();
+
         }
+
+
+
+
     }
 }
