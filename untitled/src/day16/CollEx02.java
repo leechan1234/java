@@ -62,6 +62,7 @@ public class CollEx02 {
 						stu.put(name1,score1);
 						System.out.println(score1 + "로 수정 되었습니다");
 					}
+					String a= "";
 
 			}
 		}

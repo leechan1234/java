@@ -50,7 +50,7 @@ class TvEx {
 		if(power) { // 전원이 켜있어야 동작 
 			// 랜덤 10개 담고 (중복처리)
 			for(int i = 0; i < channel.length; i++) {
-				channel[i] = (int)(Math.random() * 100) + 1; //  1 ~ 100 사이 랜덤 
+//				channel[i] = (int)(Math.random() * 100) + 1; //  1 ~ 100 사이 랜덤
 				// 중복 처리 
 				for(int j = 0; j < i; j++) { //j는 첫번째방부터 i의 이전방까지 반복
 					if(channel[i] == channel[j]) { // j가 i번째값이랑 동일하면 
